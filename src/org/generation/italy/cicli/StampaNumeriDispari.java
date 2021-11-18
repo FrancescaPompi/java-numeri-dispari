@@ -13,17 +13,21 @@ public class StampaNumeriDispari {
 		int n = scanner.nextInt();
 		System.out.println("Hai scelto: " + n);
 		
-		System.out.println("Creo un array con " + n + " numeri naturali casuali: ");
-		
+		// array
 		int[] numeriNaturali = new int [n];
 		Random random = new Random();
 		
+		System.out.println("I numeri dispari casuali nella tua lista sono: ");
 		for(int i = 0; i < numeriNaturali.length; i++) {
 			int numeriCasuali = random.nextInt(100) + 0;
 			numeriNaturali[i] = numeriCasuali;
-			System.out.print(numeriNaturali[i] + " ");
+			
+			if(numeriNaturali[i] % 2 != 0) {
+				System.out.print(numeriNaturali[i] + " ");
+			} else {
+				System.out.print("");
+			}
 		}
-		
 		
 		
 		scanner.close();
