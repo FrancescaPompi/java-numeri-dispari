@@ -21,7 +21,7 @@ public class StampaNumeriDispariBonus {
 		
 		int numeroDiDispari = 0;
 		int numeroDiPari = 0;
-		//int somma = 0;
+		int somma = 0;
 		
 		for(int i = 0; i < numeriNaturali.length; i++) {
 			int numeriCasuali = random.nextInt(100) + 0;
@@ -35,10 +35,14 @@ public class StampaNumeriDispariBonus {
 				numeroDiPari++;
 			}
 			
+			if((numeriNaturali[i] > 10) && (numeriNaturali[i] < 50)) {
+				somma += numeriNaturali[i];
+			}
 		}
-		
+
 		System.out.println("\nI numeri dispari sono: " + numeroDiDispari);
 		System.out.println("I numeri pari sono: " + numeroDiPari);
+		System.out.println("La somma dei numeri compresi tra 10 e 50 (esclusi) è: " + somma);
 		
 		
 		scanner.close();
